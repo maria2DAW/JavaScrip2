@@ -138,5 +138,84 @@ and open the template in the editor.
             }
             
         </script>
+        
+        <hr />
+        <h2>FOR</h2>
+        
+        <script>
+            
+            var i;
+            
+            for(i = 1; i < 7; i++)
+            {
+                document.write("<h" + i + ">Esto es un encabezado de tipo " + i + "</h" + i + ">");
+            }
+            
+        </script>
+        
+        <hr />
+        <h2>WHILE</h2>
+        
+        <script>
+            
+            var i = 6;
+            
+            while(i >= 1)
+            {
+                document.write("<h" + i + ">Esto es un encabezado de tipo " + i + "</h" + i + ">");
+                i--;
+            }
+            
+        </script>
+        
+        <hr />
+        <h2>Caja de interacción</h2>
+        
+        <script>
+           function mostrarAlerta()
+           {
+               alert("¡Hola mundo!");
+           }
+           
+           function mostrarConfirmación()
+           {
+               confirm("Selecciona una opción");
+           }
+           
+           function mostrarDialogo()
+           {
+               prompt("Escribe tu nombre");
+           }
+            
+        </script>       
+        
+        <input type="button" value="Caja de alerta" onclick="mostrarAlerta()" />
+        <input type="button" value="Caja de confirmación" onclick="mostrarConfirmación()" />
+        <input type="button" value="Caja de diálogo" onclick="mostrarDialogo()" />
+        
+        <hr />
+        <h2>Try catch (Detección de errores)</h2>
+        
+        <script>
+                            
+             function mensajeError()
+             {
+                 try
+                 {
+                     aler("hola"); //Como "aler" no es una función predeterminada de javascript
+                                    //se dirigirá al catch.
+                 }
+                 catch(error)
+                 {
+                     alert(error.message);
+                 }
+             }
+            
+        </script>
+        
+        <input type="button" value="Ver error" onclick="mensajeError()" />
+        
+        
+        
     </body>
 </html>
