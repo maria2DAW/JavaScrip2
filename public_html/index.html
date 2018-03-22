@@ -213,9 +213,54 @@ and open the template in the editor.
             
         </script>
         
-        <input type="button" value="Ver error" onclick="mensajeError()" />
+        <hr />
+        <h2>Consola de JavaScript</h2>
         
+        <script>
+                            
+             function mostrarConsola()
+             {
+                 var nombre = "María";
+                 
+                 console.log("Hola " + nombre);
+             }
+            
+        </script>
         
+        <input type="button" value="Ver consola" onclick="mostrarConsola()" />
+        
+        <hr />
+        <h2>Arrays</h2>
+        
+        <script>
+             var misVariables = new Array("cadena", 1, true);
+             
+             document.write(misVariables + "<br />");
+             
+             document.write(misVariables[0] + "<br />");
+             document.write(misVariables[1] + "<br />");
+             document.write(misVariables[2] + "<br />");
+             
+             var semana = new Array("Domingo", "Lunes", "Martes", "Miércoles", "Jueves", 
+             "Viernes", "Sábado");
+             
+             for(var n = 0; n < semana.length; n++)
+             {
+                 document.write(semana[n] + "<br />");
+             }
+            
+        </script>
+        
+        <hr />
+        <h2>Información del navegador</h2>
+        
+        <script>
+             
+            document.write("Nombre: " + navigator.appName + "<br />");
+            document.write("Versión: " + navigator.appVersion + "<br />");
+            document.write("Sistema operativo: " + navigator.platform + "<br />");
+            
+        </script>
         
     </body>
 </html>
