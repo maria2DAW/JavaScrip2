@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="es">
+    <head>
+        <title>Repasando JavaScript</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Repasando JavaScript" />
+    </head>
+    
+    <body>
+        <h2>Mostrar fecha</h2>
+        <script>
+            /*3 objetos principales en JavaScript
+             
+             1) document
+             2) window
+             3) navigator
+             * */          
+            var f = new Date();
+            document.write("<h1>" + f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear() + "</h1>");
+            document.write(Date());
+        </script>
+        <hr />
+        
+        <h2>Reemplazar contenido HTML</h2>
+        
+        <p id="prueba-fecha" >
+            Este es un párrafo
+        </p>
+        
+        <p id="prueba-fecha2" >
+            Este es un párrafo
+        </p>
+        
+        <script>
+            document.getElementById("prueba-fecha").innerHTML = f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear();
+            document.getElementById("prueba-fecha2").innerHTML = Date();
+        </script>
+        <hr />
+        
+        <h2>Reemplazar contenido HTML con un evento</h2>
+        <p id="prueba-fecha3">
+            Este es otro párrafo
+        </p>
+        <input type="button" value="Mostrar Fecha" onclick="mostrarFecha()"/>
+        
+        <script>
+            //Declaración de una función
+            function mostrarFecha()
+            {
+                document.getElementById("prueba-fecha3").innerHTML = Date();
+            }
+        </script>
+        <hr />
+        
+        <h2>Variables</h2>
+        
+        <script>
+            
+            var x = 5;
+            document.write(x);
+            
+            x *= 10;
+            
+            document.write("<br />" + x);
+            
+        </script>
+        
+        <hr />
+        
+        <h2>if - else if - else</h2>
+        
+        <script>
+            
+            var fecha = new Date();
+            
+            var hora = fecha.getHours();
+            
+            document.write("Hora actual: " + hora);
+            document.write("<br />");
+            
+            if(hora <= 11)
+            {
+                document.write("<h3>Buenos días.<h3>");
+            }
+            
+            else if(hora >= 12 && hora < 18)
+            {
+                document.write("<h3>Buenas tardes.<h3>");
+            }
+            
+            else
+            {
+                document.write("<h3>Buenas noches.<h3>");
+            }
+            
+        </script>
+        
+        <hr />
+        
+        <h2>Switch - Case</h2>
+        
+        <script>
+            
+            var dia = fecha.getDay();
+            
+            document.write("Día actual: " + dia);
+            document.write("<br />");
+            
+            //El objeto Date guarda los días de la semana en un array con números.
+            //Este es el orden:            
+            /*D L M X J V S
+              0 1 2 3 4 5 6 
+             */
+            
+            switch(dia)
+            {
+                case 0:
+                    document.write("Domingo");
+                    break;
+                    
+                case 5:
+                    document.write("Viernes");
+                    break;
+                    
+                case 6:
+                    document.write("Sábado");
+                    break;
+                
+                default:
+                    document.write("Esperando a que llegue el fin de semana ¬_¬");
+                    break;
+            }
+            
+        </script>
+    </body>
+</html>
